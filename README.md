@@ -1,0 +1,2 @@
+# algostruk
+Ngumpulke Prak Alogstruk

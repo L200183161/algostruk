@@ -1,0 +1,31 @@
+ # # Latian 2.1
+def ucapkanSalam():
+    print("Ass")
+
+def kuadratkan(x):
+    return x*x
+
+buah = "Mangga"
+daftarBaju = ["Batik","Loreng","Resmi Berdasi"]
+jumlahBaju = len(daftarBaju)
+
+# # Latian 2.2
+class Pesan(object):
+    """
+    Sebuah class bernama Pesan.
+    untuk memahami konsep class and object
+    """
+    def __init__(self, sebuahString):
+        self.teks = sebuahString
+    def cetakIni(self):
+        print(self.teks)
+    def cetakPakaiHurufKapital(self):
+        print(str.upper(self.teks))
+    def cetakPakaiHurufKecil(self):
+        print(str.lower(self.teks))
+    def jumKar(self):
+        return len(self.teks)
+    def cetakJumlahKarakterKu(self):
+        print("Kalimatku mempunyai", len(self.teks), "karakter.")
+    def perbarui(self, stringBaru):
+        self.teks = stringBaru

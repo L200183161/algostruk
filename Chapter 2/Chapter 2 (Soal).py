@@ -27,8 +27,29 @@ class Pesan(object):
                 h +=1
             return h
 
+class Manusia(object):
+    """Class 'Manusia' dengan inisiasi 'nama'"""
+    keadaan = 'lapar'
+
+    def __ini__(self, nama):
+        self.nama = nama
+
+    def ucapkanSalam(self):
+        print('Salam, namaku', self.nama)
+
+    def makan(self, s):
+        print('Saya baru saja makan', s)
+        self.keadaan = 'kenyang'
+
+    def olahraga(self, k):
+        print('Saya baru saja latihan', k)
+        self.keadaan = 'lapar'
+
+    def mengalikanDenganDua(self, n):
+        return n * 2
+
 # Numero Dua dan Tiga
-class mahasiswa(object):
+class mahasiswa(Manusia):
     """Class mahasiswa yang dibangun dari class manusia"""
     def __init__(self, nama, NIM, kota,us,kuliah):
         """Metode inisiasi ini menutupi metode inisiasi di class Manusia."""
@@ -65,7 +86,7 @@ class mahasiswa(object):
 #     c.
     def tambahUangSaku(self, tambahSaku):
         self.uangSaku += tambahSaku
-#     Nomer 4.
+#   Nomer 4.
     def ListKuliah(self):
         return self.listKuliah
     def ambilKuliah(self, tambahKuliah):
@@ -79,38 +100,17 @@ class mahasiswa(object):
                 print("Im sorry your subject doesnt appear in this list")
 
 # #     Nomer Tiga
-# inp1 = input("Nama Anda pliss..... : ")
-# inp2 = input("NIM Anda plis....... : ")
-# inp3 = input("Your Address please..: ")
-# inp4 = input("Your Monthly money please... : ")
-# hasil = mahasiswa(inp1,inp2,inp3,inp4)
-# print(hasil)
+inp1 = input("Nama Anda pliss..... : ")
+inp2 = input("NIM Anda plis....... : ")
+inp3 = input("Your Address please..: ")
+inp4 = input("Your Monthly money please... : ")
+inp5 = input("Your college please... : ")
+hasil = mahasiswa(inp1,inp2,inp3,inp4,inp5)
+print(hasil)
 
 # m = mahasiswa("Donny",200183161,"Rembang",150000)
 
 # Nomer 6
-class Manusia(object):
-    """Class 'Manusia' dengan inisiasi 'nama'"""
-    keadaan = 'lapar'
-
-    def __ini__(self, nama):
-        self.nama = nama
-
-    def ucapkanSalam(self):
-        print('Salam, namaku', self.nama)
-
-    def makan(self, s):
-        print('Saya baru saja makan', s)
-        self.keadaan = 'kenyang'
-
-    def olahraga(self, k):
-        print('Saya baru saja latihan', k)
-        self.keadaan = 'lapar'
-
-    def mengalikanDenganDua(self, n):
-        return n * 2
-
-
 class SiswaSMA(Manusia):
     def __init__(self, nama, NIS, umur, us):
         """Metode inisiasi ini menutupi metode inisiasi di class Manusia"""
@@ -149,5 +149,10 @@ coba = MhsTIF("Donny",161,"Rembang",10000,"UMS") #
 coba.ambilKuliah("Informatika") # from class Mahasiswa
 coba.listKuliah # from class Mahasiswa
 coba.whereKuliah() #from class MhsTIF
+coba.mengalikanDenganDua(123) #from class Manusia
+coba.ucapkanSalam() #from class Manusia
 
+# So in this class "MhsTIF" there is an inheritance between Manusia and Mahasiswa happen in here
+# in order to do so, you have to attempt this into what you have inputed in above.
+#created by Donny L200183161
 
